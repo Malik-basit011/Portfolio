@@ -975,3 +975,4 @@ body.light-mode .icon-moon { display: block; }
 .fade-in:nth-child(5) { animation-delay: .7s; }
 .fade-in:nth-child(6) { animation-delay: .85s; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  
