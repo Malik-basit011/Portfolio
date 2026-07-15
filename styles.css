@@ -340,10 +340,11 @@ body.light-mode .icon-moon { display: block; }
   font-size: .9rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
-  transition: all var(--transition);
+  transition: transform .4s ease, box-shadow .4s ease, background .4s ease, border-color .4s ease, filter .4s ease;
   cursor: pointer;
   border: 2px solid transparent;
   white-space: nowrap;
+  will-change: transform;
 }
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-2), var(--accent));
@@ -353,8 +354,8 @@ body.light-mode .icon-moon { display: block; }
 }
 .btn-primary:hover {
   filter: brightness(1.12);
-  box-shadow: 0 4px 20px rgba(110,231,247,.4);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(110,231,247,.45);
+  transform: translateY(-4px);
 }
 .btn-outline {
   border-color: var(--border-bright);
@@ -364,6 +365,8 @@ body.light-mode .icon-moon { display: block; }
   border-color: var(--accent);
   color: var(--accent);
   background: rgba(110,231,247,.07);
+  box-shadow: 0 8px 28px rgba(110,231,247,.2);
+  transform: translateY(-4px);
 }
 .btn-full { width: 100%; }
 .btn-resume svg { width: 15px; height: 15px; fill: currentColor; }
@@ -522,6 +525,13 @@ body.light-mode .icon-moon { display: block; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.8rem;
+  transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+  will-change: transform;
+}
+.about-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 32px rgba(0,0,0,.35), 0 0 0 1px rgba(110,231,247,.1);
 }
 .card-inner { display: flex; flex-direction: column; gap: 1.4rem; }
 .avatar { position: relative; width: 100px; height: 100px; margin: 0 auto; }
@@ -592,7 +602,19 @@ body.light-mode .icon-moon { display: block; }
 .skill-tag.tier-1 { background: rgba(110,231,247,.1); border-color: rgba(110,231,247,.35); color: var(--accent); }
 .skill-tag.tier-2 { background: var(--surface-2); border-color: var(--border-bright); color: var(--text-muted); }
 
-.skill-bars { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.8rem; }
+.skill-bars {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+  will-change: transform;
+}
+.skill-bars:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 32px rgba(0,0,0,.35), 0 0 0 1px rgba(110,231,247,.1);
+}
 .bar-list { display: flex; flex-direction: column; gap: 1.3rem; }
 .bar-meta { display: flex; justify-content: space-between; font-size: .88rem; font-weight: 500; margin-bottom: .45rem; color: var(--text); }
 .bar-meta span:last-child { color: var(--accent); font-family: var(--font-mono); font-size: .82rem; }
@@ -671,6 +693,14 @@ body.light-mode .icon-moon { display: block; }
   border: 1px solid rgba(167,139,250,.25);
   border-radius: 4px;
   font-family: var(--font-mono);
+  transition: transform .4s ease, border-color .4s ease, background .4s ease, box-shadow .4s ease;
+  cursor: default;
+}
+.ptag:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-2);
+  background: rgba(167,139,250,.2);
+  box-shadow: 0 4px 12px rgba(167,139,250,.2);
 }
 
 /* ============================================================
@@ -756,6 +786,13 @@ body.light-mode .icon-moon { display: block; }
   background: linear-gradient(135deg, rgba(110,231,247,.08), rgba(167,139,250,.08));
   border: 1px solid rgba(110,231,247,.25);
   border-radius: var(--radius-sm);
+  transition: transform .4s ease, border-color .4s ease, box-shadow .4s ease;
+  will-change: transform;
+}
+.cgpa-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25), 0 0 0 1px rgba(110,231,247,.15);
 }
 .cgpa-label { font-size: .78rem; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: .06em; }
 .cgpa-value { font-size: 1.3rem; font-weight: 800; }
@@ -764,6 +801,14 @@ body.light-mode .icon-moon { display: block; }
   font-size: .82rem; padding: .28rem .7rem;
   background: var(--surface-2); border: 1px solid var(--border);
   border-radius: 6px; color: var(--text-muted);
+  transition: transform .4s ease, border-color .4s ease, color .4s ease, background .4s ease;
+  cursor: default;
+}
+.timeline-courses li:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(110,231,247,.07);
 }
 
 /* ============================================================
